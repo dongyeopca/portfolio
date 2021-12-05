@@ -23,7 +23,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Header scroll={scrollposition}/>
+      <Header/>
       <container>
         <div className="grid  w-100 justify-center" style={{backgroundImage:`url(${background})`,backgroundSize:"cover",alignItems:"center",padding: '5rem 1.5rem 1.5rem 1.5rem'}}>
         <div className="text-4xl font-black text-white justify-self-center text-center mb-3">

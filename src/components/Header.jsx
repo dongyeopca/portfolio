@@ -1,7 +1,6 @@
 import { react } from 'react'
 
-function Header(props) {
-    const {scroll} = props
+function Header() {
     function show(){
         const selectbox = document.querySelector("#selectbox");
         console.log(selectbox.className)
@@ -31,7 +30,7 @@ function Header(props) {
         project.scrollIntoView({behavior:"smooth",block:"start"});
     }
     return (
-        <div className={scroll>100 ? "bg-white w-full fixed" : "w-full fixed" }>
+        <div className={"bg-white w-full fixed border-b-2"}>
         <div className="flex justify-around items-center h-14 px-3" >
             <div className="font-semibold text-2xl" style={{padding:"1.25rem 2rem"}}>DYC's Portfolio</div>
             { window.innerWidth >=768
@@ -49,16 +48,16 @@ function Header(props) {
     </div>
             }
         </div>
-        <div id="selectbox" className="hidden">
-            <ul className="w-full">
-                <li className="hover:bg-yellow-200 text-center" onClick={Aboutme}>
-                    aboutme
+        <div id="selectbox" className="hidden" >
+            <ul className="w-full border-b-2 ">
+                <li className="hover:bg-yellow-200 text-center text-lg hover:text-yellow-200" onClick={Aboutme}>
+                    Aboutme
                 </li>
-                <li className="hover:bg-yellow-200 text-center" onClick={skill}>
-                    skill
+                <li className="hover:bg-yellow-200 text-center text-lg hover:text-yellow-200" onClick={skill}>
+                    Skill
                 </li>
-                <li className="hover:bg-yellow-200 text-center" onClick={project}>
-                    project
+                <li className="hover:bg-yellow-200 text-center text-lg hover:text-yellow-200" onClick={project}>
+                    Project
                 </li>
             </ul>
         </div>
