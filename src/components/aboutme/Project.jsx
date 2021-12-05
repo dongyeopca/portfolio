@@ -31,8 +31,8 @@ const mindmirror = {
     explanation:"자연어 처리 기술을 기반으로 작성된 일기를 통해 감정 정보를 뽑아내고 일자별로 감정정보를 확인 할 수 있도록 제작된 웹앱입니다. 프로젝트를 진행하면서 처음으로 기계학습의 전반적인 과정을 배울수 있는 기회가 되었고 디자이너 없이 진행한 프로젝트라 프론트를 제작하면서 어떻게 하면 끊기지 않는 흐름의 UI/UX를 제작할 수 있을지 고민 할 수 있는 경험이였습니다.또한 카카오 로그인을 구현하면서 어렴풋이 알고있던 oauth인증의 개념을 확실히 새길 수 있었고 일자별,기간별로 필요한 정보를 뽑아내면서 효율적인 모델링의 필요성을 느꼈습니다.무엇보다 node를 공부하고 처음 풀스택으로 진행해본 프로젝트였기에 node에 조금 더 익숙해질 수 있는 경험이였습니다",
     for:"일기 작성,일기 문장별 감정분석, 일자별 기간별 감정분석 통계페이지",
     github:"https://github.com/PNU-MindMirror/MindMirror",
-    frontend:"ejs",
-    backend:"node.js/express,mongodb",
+    frontend:"EJS",
+    backend:"Node.js/express,mongodb",
 }
 const portfolio = {
     image:[portfolio1],
@@ -40,13 +40,14 @@ const portfolio = {
     explanation:"포트폴리오 용도로 React로 제작한 웹사이트로 현재 보고 계신 이 웹사이트에 해당합니다. 프론트 개발에만 집중 해 볼 수 있었던 프로젝트입니다.Next.js를 공부하고 나서 다시 제작 해 볼 계획입니다",
     for:"간단한 자기소개,인전 사항,보유 기술 스택,프로젝트 경험",
     github:"https://github.com/dongyeopca/portfolio",
+    domain:"https://dongyeopca.github.io/portfolio/",
     frontend:"React",
-    deploy:"github pages"
+    deployment:"Github pages"
 }
 
 function Project() {
     return (
-        <div id="project" className="bg-indigo-600 p-14">
+        <div id="project" className="bg-indigo-600 pt-14">
         <div className="font-black text-4xl text-white text-center mb-3">Project</div>
             <div className="grid grid-cols-1 md:grid-cols-2">
             <SeperateProject item={runningmate} />

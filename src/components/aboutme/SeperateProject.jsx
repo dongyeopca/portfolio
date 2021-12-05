@@ -3,7 +3,7 @@ function SeperateProject(props) {
   const {item} = props
 
   return (
-    <div className="bg-white mb-10 rounded-xl p-10 m-5">
+    <div className="bg-white mb-10 rounded-xl p-5 m-5 ">
         <div className="text-center mb-3 text-3xl font-black">{item.title}</div>
         <div className="flex justify-center shadow-lg rounded-xl">
             <img className="rounded-xl" width="200px" alt="프로젝트이미지" src={item.image[0]}/>
@@ -28,10 +28,13 @@ function SeperateProject(props) {
         <div className="text-xl mb-1" style={{borderLeft:"5px solid black",paddingLeft:'0.5rem'}}>Frontend</div>
         <div>{item.frontend}</div>
     </div>
-    <div className="mb-2">
-        <div className="text-xl mb-1" style={{borderLeft:"5px solid black",paddingLeft:'0.5rem'}}>Backend</div>
-        <div>{item.backend}</div>
-    </div>
+    {item.backend !== undefined 
+    ?   <div className="mb-2">
+            <div className="text-xl" style={{borderLeft:"5px solid black",paddingLeft:'0.5rem'}}>Backend</div>
+            <div>{item.backend}</div>
+        </div>
+    :   <div></div>
+    }
     {item.deployment !== undefined 
     ?   <div className="mb-2">
             <div className="text-xl" style={{borderLeft:"5px solid black",paddingLeft:'0.5rem'}}>Deployment</div>
